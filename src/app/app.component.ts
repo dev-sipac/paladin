@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
         this.isAuthenticated = authenticated;
         if (authenticated) {
           this.router.navigate(['/paises-lista']);
+          this.router.navigate(['/partner-list']);
         } else {
           this.router.navigate(['/login']);
         }

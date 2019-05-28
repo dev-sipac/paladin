@@ -6,6 +6,7 @@
       <span><a href="/">HOME</a></span>
      <span class="spacer"></span>
      <a *ngIf="isAuthenticated" mat-button  routerLink="/paises-lista">Paises</a>
+     <a *ngIf="isAuthenticated" mat-button  routerLink="/partner-list">Partners</a>
      <a *ngIf="!isAuthenticated"  mat-button  routerLink="/register">Register</a>
      <a *ngIf="!isAuthenticated" mat-button  routerLink="/login">Login</a>
      <a *ngIf="isAuthenticated" (click)="onLogout()" mat-button >Logout</a>

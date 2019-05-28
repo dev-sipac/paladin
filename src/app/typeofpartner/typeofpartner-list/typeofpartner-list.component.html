@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-card-actions>
+    <button mat-raised-button (click)="openDialog()" color="primary">NUEVO PARTNER</button>
+    <button mat-raised-button (click)="onGetResults()" color="primary">VER LISTA</button>
+  </mat-card-actions>
+  <mat-card-content>
+    <mat-list dense>
+      <mat-list-item *ngFor="let data of partnerdata"> Codigo: {{data.codigo}} | Descripcion: {{data.descripcion}} </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

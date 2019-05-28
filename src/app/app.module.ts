@@ -13,6 +13,9 @@ import { PaisesListaComponent } from './paises/paises-lista/paises-lista.compone
 import { PaisesNuevoComponent } from './paises/paises-nuevo/paises-nuevo.component';
 
 import { MyMaterialModule } from  './material.module';
+import { TypeofpartnerNewComponent } from './typeofpartner/typeofpartner-new/typeofpartner-new.component';
+import { TypeofpartnerListComponent } from './typeofpartner/typeofpartner-list/typeofpartner-list.component';
+import {TypeofpartnerService} from "./typeofpartner/typeofpartner.service";
 
 
 
@@ -24,6 +27,8 @@ import { MyMaterialModule } from  './material.module';
     LoginComponentComponent,
     PaisesListaComponent,
     PaisesNuevoComponent,
+    TypeofpartnerNewComponent,
+    TypeofpartnerListComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,8 +38,8 @@ import { MyMaterialModule } from  './material.module';
     BrowserAnimationsModule,
     AppRoutingModule,
   ],
-  providers: [AuthService, PaisesService],
+  providers: [AuthService, PaisesService, TypeofpartnerService],
   bootstrap: [AppComponent],
-  entryComponents: [PaisesNuevoComponent]
+  entryComponents: [PaisesNuevoComponent, TypeofpartnerNewComponent]
 })
 export class AppModule { }

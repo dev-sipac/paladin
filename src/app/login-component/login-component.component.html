@@ -1,0 +1,26 @@
+<div class="row" *ngIf="didFail">
+   <div class="col-xs-12 col-sm-10 col-md-6 cold-sm-offset-1 col-md-offset-3 text-center">
+     <div class="alert alert-danger">Something went wrong, please try again!</div>
+   </div>
+ </div>
+
+<mat-toolbar>
+  <span>LOGIN</span>
+</mat-toolbar>
+<mat-card class="my-card">
+   <mat-card-content>
+      <form class="my-form">
+         <mat-form-field class="full-width">
+          <mat-label>UserName</mat-label><input  matInput  placeholder="User Name" name="username" [(ngModel)] ="username">
+         </mat-form-field>
+         <mat-form-field class="full-width">
+            <mat-label>Password</mat-label>
+            <input  matInput  placeholder="Password"  [(ngModel)] ="password" name="password">
+         </mat-form-field>
+      </form>
+   </mat-card-content>
+   <mat-card-actions>
+      <button mat-raised-button (click)="onSubmit()" color="primary">LOGIN</button>
+   </mat-card-actions>
+</mat-card>
+{{isAuthenticated}}

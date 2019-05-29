@@ -9,8 +9,8 @@ import {TypeofpartnerData} from '../typeofpartner-data.model';
   styleUrls: ['./typeofpartner-new.component.css']
 })
 export class TypeofpartnerNewComponent implements OnInit {
-  code: string;
-  description: string;
+  codigo: string;
+  descripcion: string;
   doInput = true;
   isLoading = false;
   couldNotLoadData = false;
@@ -35,8 +35,8 @@ export class TypeofpartnerNewComponent implements OnInit {
   }
   onSubmit() {
     const data: TypeofpartnerData = {
-      code: this.code as string,
-      description: this.description as string
+      codigo: this.codigo as string,
+      descripcion: this.descripcion as string
     };
     console.log(data);
     this.typepartnerService.onStoreData(data);

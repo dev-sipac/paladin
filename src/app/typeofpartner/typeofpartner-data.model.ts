@@ -1,4 +1,4 @@
 export interface TypeofpartnerData {
-  code: string;
-  description: string;
+  codigo: string;
+  descripcion: string;
 }

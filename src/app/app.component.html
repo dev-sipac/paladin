@@ -2,14 +2,17 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <!--  <span>HOME</span> -->
-    {{isAuthenticated}}
-      <span><a href="/">HOME</a></span>
+<!--    {{isAuthenticated}}-->
+      <span><a href="/">Inicio</a></span>
      <span class="spacer"></span>
      <a *ngIf="isAuthenticated" mat-button  routerLink="/paises-lista">Paises</a>
      <a *ngIf="isAuthenticated" mat-button  routerLink="/partner-list">Partners</a>
+     <a *ngIf="isAuthenticated" mat-button  routerLink="/customer-list">Clientes</a>
+     <a *ngIf="isAuthenticated" mat-button  routerLink="/cyclecut-list">Corte de Ciclo</a>
+     <a *ngIf="isAuthenticated" mat-button  routerLink="/plan-list">Planes</a>
      <a *ngIf="!isAuthenticated"  mat-button  routerLink="/register">Register</a>
      <a *ngIf="!isAuthenticated" mat-button  routerLink="/login">Login</a>
-     <a *ngIf="isAuthenticated" (click)="onLogout()" mat-button >Logout</a>
+     <a *ngIf="isAuthenticated" (click)="onLogout()" mat-button >Salir</a>
   </mat-toolbar-row>
 </mat-toolbar>
 <router-outlet></router-outlet>

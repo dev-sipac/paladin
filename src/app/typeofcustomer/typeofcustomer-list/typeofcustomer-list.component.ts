@@ -3,6 +3,7 @@ import {TypeofcustomerDataModel} from '../typeofcustomer-data.model';
 import {MatDialog} from '@angular/material';
 import {TypeofcustomerService} from '../typeofcustomer.service';
 import {TypeofpartnerNewComponent} from '../../typeofpartner/typeofpartner-new/typeofpartner-new.component';
+import {TypeofcustomerNewComponent} from "../typeofcustomer-new/typeofcustomer-new.component";
 
 @Component({
   selector: 'app-typeofcustomer-list',
@@ -65,7 +66,7 @@ export class TypeofcustomerListComponent implements OnInit {
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(TypeofpartnerNewComponent, {
+    const dialogRef = this.dialog.open(TypeofcustomerNewComponent, {
       width: '450px',
       data: {codigo: this.codigo, descripcion: this.descripcion}
     });

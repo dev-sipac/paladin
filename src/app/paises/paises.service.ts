@@ -54,9 +54,9 @@ export class PaisesService {
         urlParam = 'single';
       }
 
-      console.log('https://5vlv6z38mk.execute-api.us-east-1.amazonaws.com/dev/console-paises/' + urlParam + queryParam);
+      console.log('https://5vlv6z38mk.execute-api.us-east-1.amazonaws.com/dev/console-?/' + urlParam + queryParam);
 
-      this.http.get('https://5vlv6z38mk.execute-api.us-east-1.amazonaws.com/dev/console-paises/' + urlParam + queryParam, {
+      this.http.get('https://5vlv6z38mk.execute-api.us-east-1.amazonaws.com/dev/console-?/' + urlParam + queryParam, {
         headers: new Headers({'Authorization': session.getIdToken().getJwtToken()})
       })
         .map(
@@ -88,7 +88,7 @@ export class PaisesService {
   onDeleteData() {
     this.dataLoadFailed.next(false);
     this.authService.getAuthenticatedUser().getSession((err, session) => {
-      this.http.delete('https://5vlv6z38mk.execute-api.us-east-1.amazonaws.com/dev/console-paises/?accessToken=XXX', {
+      this.http.delete('https://5vlv6z38mk.execute-api.us-east-1.amazonaws.com/dev/console-?/?accessToken=XXX', {
         headers: new Headers({'Authorization': session.getIdToken().getJwtToken()})
       })
         .subscribe(

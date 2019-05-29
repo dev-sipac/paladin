@@ -1,3 +1,13 @@
-<p>
-  cyclecut-list works!
-</p>
+<mat-card>
+  <h1>CORTE DE CICLO</h1>
+
+  <mat-card-actions>
+    <button mat-raised-button (click)="openDialog()" color="primary">NUEVO CICLO</button>
+    <button mat-raised-button (click)="onGetResults()" color="primary">VER LISTA</button>
+  </mat-card-actions>
+  <mat-card-content>
+    <mat-list dense>
+      <mat-list-item *ngFor="let data of cycledata"> Codigo: {{data.codigo}} | Descripcion: {{data.descripcion}} | Dia de Corte: {{data.diacorte}} | Dia de Pago: {{data.diapago}}</mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

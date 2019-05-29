@@ -1,3 +1,20 @@
-<p>
-  new-plan works!
-</p>
+<mat-card class="my-card">
+  <h1 mat-dialog-title>Nuevo Plan</h1>
+  <mat-card-content>
+    <form class="my-form">
+      <mat-form-field class="full-width">
+        <mat-label>Codigo</mat-label>
+        <input  matInput  placeholder="Codigo"  [(ngModel)] ="codigo" name="codigo"  required>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Descripcion</mat-label>
+        <input  matInput  placeholder="Descripcion" [(ngModel)] ="descripcion" name="descripcion"  required>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <span class="spacer"></span>
+  <mat-card-actions>
+    <button mat-raised-button (click)="onSubmit()" color="primary">CREAR</button>
+    <button mat-raised-button (click)="onNoClick()" color="primary">CANCELAR</button>
+  </mat-card-actions>
+</mat-card>

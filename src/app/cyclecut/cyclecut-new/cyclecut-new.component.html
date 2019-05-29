@@ -1,3 +1,34 @@
-<p>
-  cyclecut-new works!
-</p>
+<mat-card class="my-card">
+  <h1 mat-dialog-title>Nuevo Corte de Clico</h1>
+
+  <mat-card-content>
+    <form class="my-form">
+      <mat-form-field class="full-width">
+        <mat-label>Codigo</mat-label>
+        <input  matInput  placeholder="Codigo"  [(ngModel)] ="codigo" name="codigo"  required>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Descripcion</mat-label>
+        <input  matInput  placeholder="Descripcion" [(ngModel)] ="descripcion" name="descripcion"  required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Dia de Corte</mat-label>
+        <input matInput [matDatepicker]="diacorte" placeholder="Dia de Corte" disabled required>
+        <mat-datepicker-toggle matSuffix [for]="diacorte"></mat-datepicker-toggle>
+        <mat-datepicker #diacorte disabled="false"></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Dia de Pago</mat-label>
+        <input matInput [matDatepicker]="diapago" placeholder="Dia de Pago" disabled required>
+        <mat-datepicker-toggle matSuffix [for]="diapago"></mat-datepicker-toggle>
+        <mat-datepicker #diapago disabled="false"></mat-datepicker>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <span class="spacer"></span>
+  <mat-card-actions>
+    <button mat-raised-button (click)="onSubmit()" color="primary">CREAR</button>
+    <button mat-raised-button (click)="onNoClick()" color="primary">CANCELAR</button>
+  </mat-card-actions>
+</mat-card>
